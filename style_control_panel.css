@@ -1,0 +1,299 @@
+:root {
+    --transition-duration: 0.5s;
+    --btn-dark-purple: #332564;
+    --btn-light-purple: #9162E8FF;
+    --btn-border-color: #2e1068;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    min-height: 100vh;
+    min-width: 100vw;
+    background: #191645;
+    *font-size: 20px;
+    font-family: Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header{
+    width: 80vw;
+    height: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #302752;
+    margin-bottom: 0.5vh;
+    border: 2px solid var(--btn-border-color);
+    border-radius: 20px;
+}
+
+nav{
+    width: 76vw;
+    height: 70%;
+    margin-bottom: 0.5vh;
+    margin-left: 0.2vw;
+    margin-right: 0.2vw;
+    margin-top: 0.5vh;
+}
+  
+.navigation{
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation li{
+    height: 100%;
+    transition: var(--transition-duration);
+    flex: 1;
+    color: white;
+    font-size: 0.8rem;
+    border-right: 0.3rem solid white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    flex-direction: column;
+}
+
+.navigation li a{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation li:hover
+{
+    background: #493b7a;
+    -webkit-box-shadow: 0px 0px 40px 5px rgba(51,37,100,1);
+    -moz-box-shadow: 0px 0px 40px 5px rgba(51,37,100,1);
+    box-shadow: 0px 0px 40px 5px rgba(51,37,100,1);
+}
+  
+.navigation li:first-child{
+    border-left: 0.3rem solid white;
+}
+
+.content
+{
+    background: #493b7a;
+    width: 80vw;
+    height: 80vh;
+    border: 2px solid var(--btn-border-color);
+    border-radius: 20px;
+    padding: 1%;
+}
+
+#content-menager{
+    width: 90%;
+    height: 50%;
+    max-height: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+#titles{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 14%;
+    cursor: default;
+}
+
+.title{
+    float: left;
+    width: 50%;
+    height: 100%;
+    border: 1px solid #be85d8;
+    padding: 0.9rem;
+    text-align: center;
+    color: #1a0522;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}
+
+#tables {
+    width: 100%;
+    height: 86%;
+    display: block;
+    margin: 0 auto;
+    font-size: 0.8rem;
+  }
+
+
+.divtable {
+    float: left;
+    width: 50%;
+    min-height: 30%;
+    max-height: 100%;
+    overflow: scroll;
+    cursor: pointer;
+}
+
+.table-pass {
+    border-spacing: 0;
+    letter-spacing: 0.06rem;
+    font-weight: bold;
+    height: 100%;
+}
+.table-header{
+    color: #d6d2d8;
+}
+
+table.table-pass th {
+    border: 1px solid #be85d8;
+    padding: 0.4rem;
+    width: 100%;
+    position: sticky;
+}
+
+table.table-pass td {
+    border: 1px solid #be85d8;
+    padding: 0.4rem;
+    width: 100%;
+    position: sticky;
+}
+tr:not(:first-child):hover td {
+    background: #9a64a7;
+    color: #224083;
+    transition: var(--transition-duration);
+    cursor: pointer;
+}
+.highlight{
+    background: #9a64a7;
+    color: #2c2a33;
+}
+.content-nav{
+    display: block;
+    width: 90%;
+    height: 33%;
+    margin: 0 auto;
+}
+.buttons-div{
+    float: left;
+    width: 50%;
+    height: 100%;
+    border: 1px solid black
+}
+input[type=text],
+input[type=password]
+{
+    transition: var(--transition-duration);
+    color: white;
+    font-size: 0.9rem;
+    background: var(--btn-dark-purple);
+    border: 1px solid var(--btn-light-purple);
+    border-radius: 5px;
+    outline: none;
+    width: 90%;
+    min-height: 0.5rem;
+    padding: 0.2rem;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    margin-top: 0.5rem;
+    display: block;
+}
+input[type=text]:hover,
+input[type=password]:hover
+{
+    background: #493b7a;
+    -webkit-box-shadow: 0px 0px 40px 5px rgba(51,37,100,1);
+    -moz-box-shadow: 0px 0px 40px 5px rgba(51,37,100,1);
+    box-shadow: 0px 0px 40px 5px rgba(51,37,100,1);
+}
+/* styl jaki ma być przy wpisywaniu formularza */
+input[type=text]:focus,
+input[type=password]:focus
+{
+    background: #493b7a;
+    -webkit-box-shadow: 0px 0px 40px 5px rgba(51,37,100,1);
+    -moz-box-shadow: 0px 0px 40px 5px rgba(51,37,100,1);
+    box-shadow: 0px 0px 40px 5px rgba(51,37,100,1);
+}
+
+#pass-send
+{
+    transition: var(--transition-duration);
+    color: white;
+    font-size: 0.9rem;
+    background: var(--btn-dark-purple);
+    border: 1px solid var(--btn-light-purple);
+    border-radius: 5px;
+    outline: none;
+    width: 30%;
+    min-height: 1.5rem;
+    padding: 0.1rem;
+    margin-left: 5%;
+    margin-right: auto;
+    box-sizing: border-box;
+    margin-top: 0.5rem;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    
+}
+/* styl po najechaniu na przycisk potwierdzenia*/
+#pass-send:hover
+{
+    background: #493b7a;
+    -webkit-box-shadow: 0px 0px 40px 5px rgba(51,37,100,1);
+    -moz-box-shadow: 0px 0px 40px 5px rgba(51,37,100,1);
+    box-shadow: 0px 0px 40px 5px #332564;
+}
+.text-nav {
+    transition: var(--transition-duration);
+    color: white;
+    font-size: 0.9rem;
+    background: var(--btn-dark-purple);
+    border: 1px solid var(--btn-light-purple);
+    border-radius: 5px;
+    outline: none;
+    width: 90%;
+    min-height: 0.5rem;
+    padding: 0.2rem;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    margin-top: 0.5rem;
+    display: block;
+    text-align: center;
+}
+.success-send {
+    color: white;
+    font-size: 0.9rem;
+    border: 1px solid var(--btn-light-purple);
+    border-radius: 5px;
+    outline: none;
+    width: 90%;
+    min-height: 0.5rem;
+    padding: 0.2rem;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    margin-top: 0.5rem;
+    display: block;
+    text-align: center;
+}
+.private{
+    display: inline-block;
+    vertical-align: middle;
+}
