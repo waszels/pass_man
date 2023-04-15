@@ -113,13 +113,15 @@ $(document).ready(function() {
 
             form_append.submit(function(event) {
                 // Zatrzymaj domyślne zachowanie formularza (przeładowanie strony)
-                //event.preventDefault();
+                event.preventDefault();
                 // Wyślij dane formularza za pomocą metody POST
                 $.post('append_new_password.php', form_append.serialize(), function(response) {
                     // Obsłuż odpowiedź z serwera
-                    var success_send = $('<span>Dane zostały dodane</span>'.addClass('success-send'));
+                    var succes_send = $('<span>Dane zostały dodane</span>').addClass('success-send');
                     success_send.appendTo(div_button_append);
-
+                    setTimeout(function() {
+                        success_send.remove();
+                    }, 3000);
                 });
             });
 

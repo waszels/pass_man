@@ -17,7 +17,7 @@ require_once "db_credentials.php";
 mysqli_report(MYSQLI_REPORT_STRICT);
 try{
     //obiekt połączenia z bazą danych
-    $db_connect = new mysqli($db_host, $db_usr, $db_pass, $db_name);
+    $db_connect = new mysqli($db_host, $db_user, $db_pass, $db_name);
 
     if($db_connect->connect_error!=0) throw new Exception(mysqli_connect_errno());
     else{
