@@ -67,7 +67,7 @@ if(isset($_POST['login']))
     mysqli_report(MYSQLI_REPORT_STRICT);
     try
     {
-        $connect_db = new mysqli($db_host, $db_usr, $db_pass, $db_name);
+        $connect_db = new mysqli($db_host, $db_user, $db_pass, $db_name);
         if($connect_db->connect_errno!=0) 
         {
             throw new Exception(mysqli_connect_errno());

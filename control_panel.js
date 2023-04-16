@@ -6,6 +6,7 @@ $(document).ready(function() {
         // wywołaj plik db_pass_query.php za pomocą metody $.get()
         $.get("db_pass_query.php", function(data) {
             // utwórz tablicę obiektów z pobranych danych JSON
+            console.log(JSON.parse(data));
             var parse_data = JSON.parse(data);
             var data_common = parse_data.json1;
             var data_private = parse_data.json2;
@@ -117,7 +118,7 @@ $(document).ready(function() {
                 // Wyślij dane formularza za pomocą metody POST
                 $.post('append_new_password.php', form_append.serialize(), function(response) {
                     // Obsłuż odpowiedź z serwera
-                    var succes_send = $('<span>Dane zostały dodane</span>').addClass('success-send');
+                    var success_send = $('<span>Dane zostały dodane</span>').addClass('success-send');
                     success_send.appendTo(div_button_append);
                     setTimeout(function() {
                         success_send.remove();

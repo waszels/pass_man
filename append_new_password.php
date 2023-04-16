@@ -52,4 +52,5 @@ if(isset($_POST['new_place'])
 else{
     echo "<span name='error_value'>Uzupełnij wszystkie wymagane pola!</span>";
 }
+$connection->close();
 ?>
