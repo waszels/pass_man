@@ -97,7 +97,7 @@ $(document).ready(function() {
             var div_button_append = $("<div></div>").addClass('buttons-div');
             var div_button_delete = $("<div></div>").addClass('buttons-div');
             var div_form = $("<div></div>").attr("id", "div-form");
-            var div_statement = $("<div></div>").atrr("id", "div-statement");
+            var div_statement = $("<div></div>").attr("id", "div-statement");
             var form_append = $('<form></form>');
             form_append.append($('<span>Dodawanie nowego hasła</span>').addClass('text-nav'));
             form_append.append($('<input type="text" name="new_place" placeholder="miejsce">'));
@@ -109,7 +109,9 @@ $(document).ready(function() {
             form_append.append($('<span>Prywatne</span>').addClass('radio-text'));
             form_append.append($('<input type="radio" name="privacy" value="common">').addClass('radio-type'));
             form_append.append($('<span>Wspólne</span>').addClass('radio-text'));
-            form_append.appendTo(div_button_append);
+            form_append.appendTo(div_form);
+            div_form.appendTo(div_button_append);
+            div_statement.appendTo(div_button_append);
             div_button_append.appendTo(content_nav);
             div_button_delete.appendTo(content_nav);
             $('.content').append(content_nav);
