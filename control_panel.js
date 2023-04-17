@@ -68,15 +68,21 @@ $(document).ready(function() {
             $('<th></th>').addClass("table-header").text('Hasło').appendTo(header);
             header.appendTo(table2);
 
-            // utwórz wiersze tabeli na podstawie pobranych danych
-            $.each(data_private, function(index, row) {
-            var tr = $('<tr></tr>');
-            $('<td></td>').text(row.place).appendTo(tr);
-            $('<td></td>').text(row.login).appendTo(tr);
-            $('<td></td>').text(row.password).appendTo(tr);
-            tr.appendTo(table2);
-            });
-
+            if(data_private.length > 0){
+                // utwórz wiersze tabeli na podstawie pobranych danych
+                $.each(data_private, function(index, row) {
+                var tr = $('<tr></tr>');
+                $('<td></td>').text(row.place).appendTo(tr);
+                $('<td></td>').text(row.login).appendTo(tr);
+                $('<td></td>').text(row.password).appendTo(tr);
+                tr.appendTo(table2);
+                });
+            }
+            else{
+                var tr = $('<tr></tr>');
+                $('<td colspan="3" id="no-data"></td>').text('BRAK WPISÓW').appendTo(tr);
+                tr.appendTo(table2);
+            }
             // dodaj  tabelę do elementu z klasą "divtab2"
             table2.appendTo(divtable2);
             // dodaj  diva-tabeli do elementu z klasą "tables"
@@ -90,6 +96,8 @@ $(document).ready(function() {
             var content_nav = $("<div></div>").addClass('content-nav');
             var div_button_append = $("<div></div>").addClass('buttons-div');
             var div_button_delete = $("<div></div>").addClass('buttons-div');
+            var div_form = $("<div></div>").attr("id", "div-form");
+            var div_statement = $("<div></div>").atrr("id", "div-statement");
             var form_append = $('<form></form>');
             form_append.append($('<span>Dodawanie nowego hasła</span>').addClass('text-nav'));
             form_append.append($('<input type="text" name="new_place" placeholder="miejsce">'));

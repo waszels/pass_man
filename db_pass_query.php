@@ -17,10 +17,14 @@ else{
 
     $id_user = mysqli_real_escape_string($connection, $_SESSION['id']);
     $result = $connection->query("SELECT place, login, password FROM private_pass WHERE id_user='$id_user'");
-    while($row = $result -> fetch_assoc()){
-        $data_private[] = $row;
+    if($result->num_rows>0){
+        while($row = $result -> fetch_assoc()){
+            $data_private[] = $row;
+        }
     }
-    
+    else{
+        $data_private = [];
+    }
     $data = array('json1' => $data_common, 'json2' => $data_private);
     $j_data = json_encode($data);
     echo $j_data;
