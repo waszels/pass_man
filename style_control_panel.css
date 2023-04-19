@@ -190,14 +190,15 @@ tr:not(:first-child):hover td {
 .content-nav{
     display: block;
     width: 90%;
-    height: 33%;
+    height: 43%;
     margin: 0 auto;
 }
 .buttons-div{
     float: left;
     width: 50%;
     height: 100%;
-    border: 1px solid black
+    border: 1px solid black;
+    padding: 0.5rem;
 }
 input[type=text],
 input[type=password]
@@ -279,7 +280,7 @@ input[type=password]:focus
     margin-left: auto;
     margin-right: auto;
     box-sizing: border-box;
-    margin-top: 0.5rem;
+    /*margin-top: 0.5rem;*/
     display: block;
     text-align: center;
 }
@@ -323,6 +324,12 @@ input[type=password]:focus
 }
 #div-statement {
     width: 100%;
-    height: 18%;
+    height: 16%;
     display: block;
+}
+.success-send{
+    font-size: 0.7rem;
+    color: rgb(27, 238, 27);
+    letter-spacing: 0.2rem;
+    padding: 0.3rem;
 }

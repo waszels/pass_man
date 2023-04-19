@@ -129,7 +129,7 @@ $(document).ready(function() {
                 $.post('append_new_password.php', form_append.serialize(), function(response) {
                     // Obsłuż odpowiedź z serwera
                     var success_send = $('<span>Dane zostały dodane</span>').addClass('success-send');
-                    success_send.appendTo(div_button_append);
+                    success_send.appendTo(div_statement);
                     setTimeout(function() {
                         success_send.remove();
                     }, 3000);
