@@ -11,25 +11,6 @@ $(document).ready(function() {
             var data_common = parse_data.json1;
             var data_private = parse_data.json2;
             
-            // utwórz diva dla menedżera haseł
-            var content_menager = $('<div></div>').attr("id", "content-menager");
-
-            // utwórz div dla tutyłów
-            var titles = $('<div></div>').attr("id", "titles");
-            var title1 = $('<div></div>').addClass("title");
-            title1.appendTo(titles);
-            var text1 = $('<span></span>').addClass("title-menager").text("Hasła wspólne");
-            text1.appendTo(title1);
-            var title2 = $('<div></div>').addClass("title");
-            title2.appendTo(titles);
-            var text2 = $('<span></span>').addClass("title-menager").text("Hasła prywatne");
-            text2.appendTo(title2);
-
-            titles.appendTo(content_menager);
-
-            // utwórz nowego diva o klasie "tables"
-            var tables = $('<div></div>').attr("id", "tables");
-
             // utwórz diva dla "tabeli1" o klasie "table1"
             var divtable1 = $('<div></div>').addClass("divtable");
             // utwórz nową tabelę
@@ -48,7 +29,7 @@ $(document).ready(function() {
                 $('<td></td>').text(row.place).appendTo(tr);
                 $('<td></td>').text(row.login).appendTo(tr);
                 $('<td></td>').text(row.password).appendTo(tr);
-                tr.appendTo(table1);
+                tr.appendTo(".");
             });
 
             // dodaj tabelę do elementu z klasą "divtab1"
