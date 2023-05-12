@@ -2,10 +2,10 @@
 session_start();
 
 if(!isset($_SESSION['logged']))
-{
-    header('Location: index.php');
-    exit();
-}
+    {
+        header('Location: index.php');
+        exit();
+    }
 
 ?>
 
@@ -42,7 +42,7 @@ if(!isset($_SESSION['logged']))
                 </div>
             </div>
             
-            <div id="tables"></div>
+            <div id="tables">
                 <div class="divtable">
                     <table class="table-pass">
                         <tr>
